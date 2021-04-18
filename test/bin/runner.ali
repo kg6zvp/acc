@@ -1,0 +1,111 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatA
+A -gnata
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U runner%b		runner.adb		45c4580e NE OO SU
+W acc_test%s		acc_test.adb		acc_test.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ahven%s		ahven.adb		ahven.ali
+W ahven.framework%s	ahven-framework.adb	ahven-framework.ali
+W ahven.text_runner%s	ahven-text_runner.ads	ahven-text_runner.ali
+Z system%s		system.ads		system.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+D acc.ads		20210418193504 37603ca9 acc%s
+D acc_test.ads		20210418211832 b6ce7ff7 acc_test%s
+D ada.ads		20200408124609 76789da1 ada%s
+D a-charac.ads		20200408124609 2d3ec45b ada.characters%s
+D a-chahan.ads		20200408124609 1601a50f ada.characters.handling%s
+D a-chlat1.ads		20200408124609 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20200408124609 61e5e089 ada.containers%s
+D a-conhel.ads		20200408124609 20298884 ada.containers.helpers%s
+D a-convec.ads		20200408124609 7e2b0fdf ada.containers.vectors%s
+D a-except.ads		20200408124609 291912d5 ada.exceptions%s
+D a-finali.ads		20200408124609 bf4f806b ada.finalization%s
+D a-iteint.ads		20200408124609 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20200408124609 119b8fb3 ada.streams%s
+D a-string.ads		20200408124609 90ac6797 ada.strings%s
+D a-strbou.ads		20200408124609 53ab54ae ada.strings.bounded%s
+D a-strmap.ads		20200408124609 e8bb714a ada.strings.maps%s
+D a-strsup.ads		20200408124609 a27dcb33 ada.strings.superbounded%s
+D a-strunb.ads		20200408124609 8098c91f ada.strings.unbounded%s
+D a-tags.ads		20200408124609 491b781d ada.tags%s
+D a-unccon.ads		20200408124609 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20200408124609 eff36322 ada.unchecked_deallocation%s
+D ahven.ads		20180724034004 566bde77 ahven%s
+D ahven-astrings.ads	20180724034004 1b9f3e2c ahven.astrings%s
+D ahven-framework.ads	20180724034004 bd747bf9 ahven.framework%s
+D ahven-listeners.ads	20180724034004 c141208f ahven.listeners%s
+D ahven-long_astrings.ads  20180724034004 bd3d4926 ahven.long_astrings%s
+D ahven-name_list.ads	20180724034004 88b390f5 ahven.name_list%s
+D ahven-parameters.ads	20180724034004 619df674 ahven.parameters%s
+D ahven-results.ads	20180724034004 e13cdb64 ahven.results%s
+D ahven-slist.ads	20180724034004 96fd08d7 ahven.slist%s
+D ahven-text_runner.ads	20180724034004 54f32ac8 ahven.text_runner%s
+D helper.ads		20210418185853 d3b637c4 helper%s
+D runner.adb		20210418193051 1a8d76c8 runner%b
+D system.ads		20200408124609 4635ec04 system%s
+D s-assert.ads		20200408124609 cd8d2c94 system.assertions%s
+D s-atocou.ads		20200408124609 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20200408124609 54135002 system.exception_table%s
+D s-finmas.ads		20200408124609 7811a767 system.finalization_masters%s
+D s-finroo.ads		20200408124609 4ff27390 system.finalization_root%s
+D s-parame.ads		20200408124609 48ec542b system.parameters%s
+D s-pooglo.ads		20200408124609 ede33ef8 system.pool_global%s
+D s-secsta.ads		20200408124609 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200408124609 a7318a92 system.soft_links%s
+D s-stache.ads		20200408124609 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200408124609 09bd3940 system.standard_library%s
+D s-stoele.ads		20200408124609 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20200408124609 b16154c2 system.storage_pools%s
+D s-stposu.ads		20200408124609 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20200408124609 aedef97e system.stream_attributes%s
+D s-string.ads		20200408124609 8fe54fb7 system.strings%s
+D s-ststop.ads		20200408124609 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20200408124609 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200408124609 34867c83 system.unsigned_types%s
+X 2 acc_test.ads
+8K9*ACC_Test 25e13 33|3w6 8r37
+9R14*Test<24|131R9> 9e68 33|8r46
+X 12 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[9|111]>
+X 18 a-strunb.ads
+166V14*"="{boolean} 9|64i19
+X 22 ahven.ads
+18K9*Ahven 54e10 33|1r6 2r6 6r8 6r38 8r4 9r4
+X 24 ahven-framework.ads
+28K15*Framework 362e20 33|1w12 6r14 6r44 8r10
+192R9*Test_Suite<34R9> 358e14 33|6r24
+206V13*Create_Suite{192R9} 33|6s54
+211U14*Add_Test 33|8s20
+X 31 ahven-text_runner.ads
+24K15*Text_Runner 33e22 33|2w12 9r10
+25U14*Run 33|9s22
+X 33 runner.adb
+5U11*Runner 5b11 10l5 10t11
+6r4 S{24|192R9} 8m30 8r30 9m27 9r27
+

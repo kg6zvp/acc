@@ -1,0 +1,19 @@
+with "../acc.gpr";
+with "ahven";
+
+project ACC.Tests is
+	for Languages use ("ada");
+
+	for Create_Missing_Dirs use "True";
+	for Source_Dirs use ("**");
+	for Library_Dir use "bin/";
+	for Object_Dir use "bin/";
+	for Library_Ali_Dir use "bin/";
+	for Exec_Dir use "bin/";
+	for Main use ("runner.adb");
+
+	package Compiler is
+		for Default_Switches ("Ada") use ("-gnata");
+	end Compiler;
+
+end ACC.Tests;

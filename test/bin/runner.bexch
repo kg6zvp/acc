@@ -1,0 +1,29 @@
+[GENERATED OBJECT FILE]
+b__runner.o
+[PROJECT FILES]
+/home/smccollum/git/acc/test/acc-tests.gpr
+20210418205457
+/usr/share/gpr/directories.gpr
+20190725002408
+/usr/share/gpr/ahven.gpr
+20190724174209
+/home/smccollum/git/acc/acc.gpr
+20210418185935
+[BOUND OBJECT FILES]
+/home/smccollum/git/acc/build/acc.o
+/home/smccollum/git/acc/test/bin/helper.o
+/home/smccollum/git/acc/test/bin/acc_test.o
+/home/smccollum/git/acc/test/bin/runner.o
+[GENERATED SOURCE FILES]
+b__runner.ads
+b__runner.adb
+b__runner.ali
+[RESULTING OPTIONS]
+-L/home/smccollum/git/acc/test/bin/
+-L/home/smccollum/git/acc/test/bin/
+-L/home/smccollum/git/acc/build/
+-L/usr/lib64/ahven/
+-L/usr/lib/gcc/x86_64-redhat-linux/9/adalib/
+-shared
+-lgnat-9
+-ldl
