@@ -27,7 +27,6 @@ test:
 package:
   stage: package
   script:
-    - HARDWARE_PLATFORM=x86_64
     - dnf install -y rpm-build rpmdevtools redhat-rpm-config tree
     - rpmdev-setuptree
     - pwd && tree ~/rpmbuild

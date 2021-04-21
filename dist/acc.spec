@@ -36,7 +36,11 @@ gprclean acc.gpr
 gprbuild acc.gpr
 
 %install
-gprinstall -r --prefix=%{buildroot}/usr --lib-subdir=lib64 -p acc.gpr
+%ifarch x86_64
+	gprinstall -r --prefix=%{buildroot}/usr --lib-subdir=lib64 -p acc.gpr
+%else
+	gprinstall -r --prefix=%{buildroot}/usr -p acc.gpr
+%endif
 
 %files
 %{_includedir}/%{name}
