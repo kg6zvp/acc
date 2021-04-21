@@ -28,7 +28,7 @@ package:
   stage: package
   script:
     - HARDWARE_PLATFORM=x86_64
-    - dnf install rpm-build rpmdevtools
+    - dnf install -y rpm-build rpmdevtools
     - rpmdev-setuptree
     - tar -cvzf acc-1.0.tar.gz .
     - mv acc-1.0.tar.gz ~/rpmbuild/SOURCES/
