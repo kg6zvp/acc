@@ -41,7 +41,7 @@ package:
     - pwd && tree ~/rpmbuild
     - rpm --eval '%{build}'
     - rpm --showrc
-    - HARDWARE_PLATFORM=x86_64 rpmbuild -v -bb acc.spec
+    - HARDWARE_PLATFORM=x86_64 rpmbuild --define 'build /root/rpmbuild/BUILD' -v -bb acc.spec
     - pwd && tree ~/rpmbuild
     - popd
     - pwd && tree ~/rpmbuild
