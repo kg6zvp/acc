@@ -7,6 +7,7 @@ before_script:
 stages:
   - build
   - test
+  - package
 
 build:
   stage: build
@@ -22,6 +23,26 @@ test:
   stage: test
   script:
     - HARDWARE_PLATFORM=x86_64 ./test.sh
+
+package:
+  stage: package
+  script:
+    - HARDWARE_PLATFORM=x86_64
+    - dnf install rpm-build rpmdevtools
+    - rpmdev-setuptree
+    - tar -cvzf acc-1.0.tar.gz .
+    - mv acc-1.0.tar.gz ~/rpmbuild/SOURCES/
+    - cp dist/acc.spec ~/rpmbuild/SPECS/
+    - pushd ~/rpmbuild/SPECS/
+    - rpmbuild -v -bb acc.spec
+    - popd
+    - cp -rv ~/rpmbuild/RPMS/* dist/
+  artifacts:
+    paths:
+      - dist/*
+    expire_in: 1 week
+  only:
+    - master
 
 after_script:
   - echo "End CI"

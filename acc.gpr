@@ -4,7 +4,6 @@ project ACC is
 	for Library_Dir use "lib/";
 	for Object_Dir use "build/";
 	for Library_Ali_Dir use "build/";
-	for Exec_Dir use "bin/";
 
 	package Compiler is
 		for Default_Switches ("Ada") use ("-gnata");
