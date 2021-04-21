@@ -30,7 +30,6 @@ Features:
 
 %prep
 %setup -c acc-1.0
-tar -xvf acc-1.0.tar.gz --directory %{build}/acc-1.0
 
 %build
 gprclean acc.gpr
