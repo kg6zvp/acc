@@ -7,7 +7,7 @@ before_script:
 stages:
   - build
   - test
-  - package
+  - fedpackage
 
 build:
   stage: build
@@ -24,8 +24,8 @@ test:
   script:
     - HARDWARE_PLATFORM=x86_64 ./test.sh
 
-package:
-  stage: package
+fedpackage:
+  stage: fedpackage
   script:
     - dnf install -y rpm-build rpmdevtools redhat-rpm-config tree
     - rpmdev-setuptree
@@ -39,10 +39,12 @@ package:
     - pushd ~/rpmbuild/SPECS/
     - pwd && tree ~/rpmbuild
     - HARDWARE_PLATFORM=x86_64 rpmbuild -v -bb acc.spec
+    - HARDWARE_PLATFORM=x86_64 rpmbuild -v -bs acc.spec
     - pwd && tree ~/rpmbuild
     - popd
     - pwd && tree ~/rpmbuild
     - cp -rv ~/rpmbuild/RPMS/* dist/
+    - cp -rv ~/rpmbuild/SRPMS/* dist/
   artifacts:
     paths:
       - dist/*
