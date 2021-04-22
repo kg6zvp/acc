@@ -27,7 +27,7 @@ test:
     - HARDWARE_PLATFORM=x86_64 ./test.sh
 
 fed31_package:
-  stage: fed31package
+  stage: fed31_package
   image: 'fedora:31'
   script:
     - dnf install -y rpm-build rpmdevtools redhat-rpm-config tree
