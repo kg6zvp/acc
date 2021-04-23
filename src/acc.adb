@@ -30,7 +30,7 @@ package body ACC is
 	begin
 		Results := Multiple_Match(Matches, Candidate);
 		Matches_Num := Integer'Value(Results.Length'Image);
-		if Matches_Num <= 1 then
+		if Matches_Num = 1 then
 			return To_String(Results.Element(1));
 		end if;
 		return "";

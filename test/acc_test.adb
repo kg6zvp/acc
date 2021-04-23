@@ -19,6 +19,7 @@ package body ACC_Test is
 		--Match
 		Ahven.Framework.Add_Test_Routine(T, Match_Should_Return_Match_If_Present'Access, "Match_Should_Return_Match_If_Present");
 		Ahven.Framework.Add_Test_Routine(T, Match_Should_Return_Empty_For_Multiple_Match'Access, "Match_Should_Return_Empty_For_Multiple_Match");
+		Ahven.Framework.Add_Test_Routine(T, Match_Should_Not_Fail_On_No_Match'Access, "Match_Should_Not_Fail_On_No_Match");
 	end Initialize;
 
 	procedure Multiple_Match_Should_Narrow_Down_To_Single_Match_If_Only_One is
@@ -67,4 +68,13 @@ package body ACC_Test is
 
 		Assert("" = ACC.Match(Matches => Match_Vec, Candidate => "P"), """"" = """ & ACC.Match(Matches => Match_Vec, Candidate => "P") & """");
 	end Match_Should_Return_Empty_For_Multiple_Match;
+
+	procedure Match_Should_Not_Fail_On_No_Match is
+		Match_Vec : ACC.Str.Vector;
+	begin
+		Match_Vec.Append(To_Unbounded_String("System"));
+		Match_Vec.Append(To_Unbounded_String("Ports"));
+
+		Assert("" = ACC.Match(Matches => Match_Vec, Candidate => "spl"), "Failed to return empty for no match");
+	end Match_Should_Not_Fail_On_No_Match;
 end ACC_Test;

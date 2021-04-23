@@ -1,6 +1,6 @@
 Name:           acc
 Version:        1.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Ada Completion Candidates
 
 License:        MIT

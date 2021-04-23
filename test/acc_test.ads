@@ -19,6 +19,7 @@ private
 	--Match
 	procedure Match_Should_Return_Match_If_Present;
 	procedure Match_Should_Return_Empty_For_Multiple_Match;
+	procedure Match_Should_Not_Fail_On_No_Match;
 
 	--Complete
 
